@@ -1,5 +1,10 @@
 pipeline {
-    agent any 
+        agent {
+            docker {
+                label 'docker-slave-demo'
+            }
+        }
+    
         stages {
             stage('Build') {
                 steps {
