@@ -1,6 +1,5 @@
 pipeline {
-        
-    
+            
         stages {
              stage('Build') {
                 agent {
@@ -9,11 +8,11 @@ pipeline {
                         label 'docker-slave-demo'
                     
                      }
-               }
+                 }
                 steps {
                     echo 'Hello world! Running build phase.' 
+               }
             }
-        }
         stage ('Test') { 
             steps {
                     echo 'Running test phase.' 
