@@ -1,13 +1,15 @@
 pipeline {
-        agent {
-            docker {
-                image 'jenkins/inbound-agent:latest'
-                label 'docker-slave-demo'
-            }
-        }
+        
     
         stages {
-            stage('Build') {
+             stage('Build') {
+                agent {
+                    docker {
+                        image 'jenkins/inbound-agent:latest'
+                        label 'docker-slave-demo'
+                    
+                     }
+               }
                 steps {
                     echo 'Hello world! Running build phase.' 
             }
