@@ -4,7 +4,7 @@ pipeline {
              stage('Build') {
                 agent {
                     docker {
-                        image 'jenkins/inbound-agent:latest'
+                        //image 'jenkins/inbound-agent:latest'
                         label 'docker-slave-demo'
                     
                      }
