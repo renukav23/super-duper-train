@@ -7,7 +7,7 @@ pipeline {
                     
                        script {
                               echo 'Hello world! Running build phase.'
-                              docker build -t imagetest:1.0.0 -f Dockerfile .                              
+                              docker build -t imagetest -f Dockerfile .                              
                        }                                          
                }
             }
