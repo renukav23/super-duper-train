@@ -1,0 +1,8 @@
+version: '3'
+services:
+  myservice:
+    build:
+      dockerfile: Dockerfile
+    image: debian/stable-slim
+    ports:
+    - 56633:22
