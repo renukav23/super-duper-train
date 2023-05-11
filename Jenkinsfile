@@ -8,8 +8,9 @@ pipeline {
                        script {
                               echo 'Hello world! Running build phase.'
                               //docker build -f Dockerfile. --tag testbuildimage --no-cache
-                              sh '
-                                   docker info '
+                              sh '''
+                                   docker info
+                                 '''
                               
                        }
                                           
