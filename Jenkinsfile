@@ -7,11 +7,8 @@ pipeline {
                     
                        script {
                               echo 'Hello world! Running build phase.'
-                              //docker build -f Dockerfile . --tag testbuildimage --no-cache
-                              docker build -f Dockerfile .
-                              
-                       }
-                                          
+                              docker build -t imagetest:1.0.0 -f Dockerfile .                              
+                       }                                          
                }
             }
         stage ('Test') { 
