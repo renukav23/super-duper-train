@@ -5,6 +5,8 @@ pipeline {
                     agent {label 'docker-slave-demo'}
                 steps {
                     echo 'Hello world! Running build phase.' 
+                       sh " 
+                       docker build -f Dockerfile. -t testbuildimage:1.0 --no-cache "
                }
             }
         stage ('Test') { 
